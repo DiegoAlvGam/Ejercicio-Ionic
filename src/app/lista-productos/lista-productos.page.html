@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Productos</ion-title>
+    <ion-item>
+      <ion-button routerLink="/cart">
+        <ion-icon name="cart-outline"></ion-icon>
+    </ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let product of products">
+      <ion-label>{{ product.name }}</ion-label>
+      <ion-label slot="end">${{ product.price }}</ion-label>
+      <ion-button slot="end" (click)="addToCart(product)">Agregar al carrito</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Carrito de compras</ion-title>
+    <ion-item>
+      <ion-button routerLink="/lista-productos">Regresar</ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let item of cartItems">
+      <ion-label>{{ item.name }}</ion-label>
+      <ion-label slot="end">${{ item.price }}</ion-label>
+      <ion-button (click)="removeFromCart(item)" slot="end" color="danger">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

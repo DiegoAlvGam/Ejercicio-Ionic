@@ -1,0 +1,29 @@
+{
+    "users": [
+        {
+          "id": 1,
+          "username": "diego",
+          "password": "12345678"
+        }
+      ],
+
+    "products": [
+      {
+        "id": 1,
+        "name": "Manzana",
+        "price": 10
+      },
+      {
+        "id": 2,
+        "name": "Mango",
+        "price": 15
+      },
+      {
+        "id": 3,
+        "name": "Platano",
+        "price": 20
+      }
+    ],
+
+    "cart": []
+  }

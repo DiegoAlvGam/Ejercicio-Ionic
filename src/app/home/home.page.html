@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <form [formGroup]="form">
+      <ion-list>
+        <ion-item>
+          <ion-input type="email" [errorText]="emailError" formControlName="email" label="Correo" placeholder="Introduce tu correo aquí"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-input type="password" [errorText]="passError" formControlName="password" label="Contraseña" placeholder="Introduce tu contraseña aquí"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-button [disabled]="form.invalid" (click)="logForm()" routerLink="/lista-productos">Inicio de sesion</ion-button>
+        </ion-item>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>
